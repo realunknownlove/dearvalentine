@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Emoji Animation</title>
+    <style>
+        body {
+            background-color: red; /* Red background */
+            color: black; /* Black text */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 25px; /* Bigger emojis */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #output {
+            font-size: 25px; /* Increase emoji size */
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div> <!-- Container for emojis -->
+
+    <script>
+        let i = 1;
+        let outputDiv = document.getElementById("output");
+
+        let interval = setInterval(function () {
+            outputDiv.innerHTML +=  "&#9829 H &#9829 A"; // Adds one heart each time
+            i++;
+            if (i > 10000) {
+                clearInterval(interval); // Stops after 100 emojis
+            }
+        }, 0.5); // 1.5-second delay
+    </script>
+</body>
+</html>
